@@ -1,21 +1,42 @@
 package br.com.angie.theangietalks.controller;
 
-import br.com.angie.theangietalks.DAO.UserInterface;
+import br.com.angie.theangietalks.repository.UserInterface;
 import br.com.angie.theangietalks.model.User;
+import br.com.angie.theangietalks.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
+@RequestMapping("/users")
 public class UserController {
-    @Autowired
-    private UserInterface userInterface;
+    private UserService userService;
 
-    @GetMapping("/users")
-    public List<User> usersList(){
-        return (List<User>) userInterface.findAll();
+    public UserController(UserService userService){
+        this.userService = userService;
     }
 
+    @GetMapping
+    public ResponseEntity<List<User>> getUsers(){
+        return ResponseEntity.status(200).body(userService.users());
+    }
+
+    @PostMapping
+    public ResponseEntity<User> postUser(@RequestBody User user){
+        return ResponseEntity.status(201).body(userService.post(user));
+    }
+
+    @PutMapping
+    public ResponseEntity<User> putUser(@RequestBody User user){
+        return ResponseEntity.status(200).body(userService.put(user));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Integer id){
+        userService.delete(id);
+        return ResponseEntity.status(204).build();
+    }
 }
