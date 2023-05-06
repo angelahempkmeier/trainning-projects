@@ -3,11 +3,17 @@ package br.com.angie.theangietalks.controller;
 import br.com.angie.theangietalks.repository.UserInterface;
 import br.com.angie.theangietalks.model.User;
 import br.com.angie.theangietalks.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin("*")
@@ -25,12 +31,12 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<User> postUser(@RequestBody User user){
+    public ResponseEntity<User> postUser(@Valid @RequestBody User user){
         return ResponseEntity.status(201).body(userService.post(user));
     }
 
     @PutMapping
-    public ResponseEntity<User> putUser(@RequestBody User user){
+    public ResponseEntity<User> putUser(@Valid @RequestBody User user){
         return ResponseEntity.status(200).body(userService.put(user));
     }
 
@@ -38,5 +44,25 @@ public class UserController {
     public ResponseEntity<?> deleteUser(@PathVariable Integer id){
         userService.delete(id);
         return ResponseEntity.status(204).build();
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<User> login(@Valid @RequestBody User user){
+        Boolean isValidPassword = userService.login(user);
+        if(!isValidPassword){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        return ResponseEntity.status(200).build();
+    }
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public Map<String, String> handleValidationException(MethodArgumentNotValidException e){
+        Map<String, String> err = new HashMap<>();
+        e.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = ((FieldError) error).getField();
+            String errorMessage = error.getDefaultMessage();
+            err.put(fieldName, errorMessage);
+        });
+        return err;
     }
 }

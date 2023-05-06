@@ -1,6 +1,9 @@
 package br.com.angie.theangietalks.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "user_data")
@@ -9,15 +12,27 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "fullname", length = 200, nullable = true)
+
+    @Size(min = 3, message = "Minimum of 3 characters in the name!")
+    @NotBlank(message = "Name is mandatory!")
+    @Column(name = "fullname", length = 200, nullable = false)
     private String fullname;
-    @Column(name = "username", length = 100, nullable = true)
+
+    @NotBlank(message = "Username is mandatory!")
+    @Column(name = "username", length = 100, nullable = false)
     private String username;
-    @Column(name = "email", length = 50, nullable = true)
+
+    @Email(message = "Is necessary to put a valid email!")
+    @NotBlank(message = "Email is mandatory!")
+    @Column(name = "email", length = 50, nullable = false)
     private String email;
-    @Column(name = "password_user", columnDefinition = "TEXT", nullable = true)
+
+    @NotBlank(message = "Password is mandatory!")
+    @Column(name = "password_user", columnDefinition = "TEXT", nullable = false)
     private String password_user;
-    @Column(name = "phone", length = 15, nullable = true)
+
+    @NotBlank(message = "Phone is mandatory!")
+    @Column(name = "phone", length = 15, nullable = false)
     private String phone;
 
     public Integer getId() {
