@@ -6,6 +6,11 @@ import br.com.angie.theangietalks.repository.UserInterface;
 import br.com.angie.theangietalks.sucurity.Token;
 import br.com.angie.theangietalks.sucurity.TokenUtil;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -17,6 +22,7 @@ public class UserService {
 
     private UserInterface repository;
     private PasswordEncoder passwordEncoder;
+    private final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     public UserService(UserInterface repository) {
         this.repository = repository;
@@ -24,6 +30,7 @@ public class UserService {
     }
 
     public List<User> users() {
+        logger.info("User: " + getLogger() + " listing users.");
         List<User> list = repository.findAll();
         return list;
     }
@@ -32,6 +39,7 @@ public class UserService {
         String encoder = this.passwordEncoder.encode(user.getPassword_user());
         user.setPassword(encoder);
         User newUser = repository.save(user);
+        logger.info("User: " + getLogger() + " creating user.");
         return newUser;
     }
 
@@ -39,11 +47,13 @@ public class UserService {
         String encoder = this.passwordEncoder.encode(user.getPassword_user());
         user.setPassword(encoder);
         User newUser = repository.save(user);
+        logger.info("User: " + getLogger() + " updating user" + user.getFullname());
         return newUser;
     }
 
     public Boolean delete(Integer id) {
         repository.deleteById(id);
+        logger.info("User: " + getLogger() + " deleting user.");
         return true;
     }
 
@@ -62,5 +72,13 @@ public class UserService {
             }
         }
         return null;
+    }
+
+    private String getLogger(){
+        Authentication userLogger = SecurityContextHolder.getContext().getAuthentication();
+        if(!(userLogger instanceof AnonymousAuthenticationToken)){
+            return userLogger.getName();
+        }
+        return "Null";
     }
 }
