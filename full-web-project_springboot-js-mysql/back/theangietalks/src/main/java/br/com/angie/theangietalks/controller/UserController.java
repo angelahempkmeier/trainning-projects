@@ -1,8 +1,10 @@
 package br.com.angie.theangietalks.controller;
 
+import br.com.angie.theangietalks.dto.UserDTO;
 import br.com.angie.theangietalks.repository.UserInterface;
 import br.com.angie.theangietalks.model.User;
 import br.com.angie.theangietalks.service.UserService;
+import br.com.angie.theangietalks.sucurity.Token;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,12 +48,12 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<User> login(@Valid @RequestBody User user){
-        Boolean isValidPassword = userService.login(user);
-        if(!isValidPassword){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+    public ResponseEntity<Token> login(@Valid @RequestBody UserDTO userDTO){
+        Token token = userService.generateToken(userDTO);
+        if(token != null){
+            return ResponseEntity.ok(token);
         }
-        return ResponseEntity.status(200).build();
+        return ResponseEntity.status(403).build();
     }
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
