@@ -54,3 +54,18 @@ button:hover {
     background-color: #CCBDFA;
     color: #1C0D4B;
 }
+
+a {
+    list-style: none;
+    color: #1C0D4B;
+}
+
+a:hover{
+    color: #CCBDFA;
+}
+
+.login{
+    padding-top: 10px;
+    text-decoration: underline;
+    
+}

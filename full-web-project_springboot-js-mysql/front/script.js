@@ -40,3 +40,7 @@ form.addEventListener('submit', function(e) {
     subscribe();
     clear();
 });
+
+function logon(){
+    window.location.href = "logon.html";
+}
