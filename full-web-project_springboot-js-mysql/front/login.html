@@ -20,6 +20,22 @@
             height: 100%;
             
         }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        form input {
+            width: 250px;
+            height: 30px;
+            border-radius: 30px;
+            border: none;
+            padding: 0 15px 0 15px;
+        }
         p {
             border: 0.5px solid #1C0D4B;
             padding: 200px;
@@ -34,12 +50,39 @@
             padding: 205px;
             border: 0.5px solid rgb(31, 31, 80);
         }
+        button {
+            margin-top: 10px;
+            width: 20vw;
+            height: 30px;
+            border-radius: 30px;
+            border: none;
+            background-color: #1C0D4B;
+            color: #CCBDFA;
+            transition: 250ms linear;
+        }
+        button:hover {
+            background-color: #CCBDFA;
+            color: #1C0D4B;
+            width: 23vw;
+        }   
+
+        a{
+            padding-top: 10px;
+            color: #CCBDFA;
+        }
 
     </style>
 </head>
 <body>
     <div>
-        <p>Login!</p>
+        <form action="" autocomplete="off">
+            <input type="text" class="email" name="email" placeholder="Email">
+            <input type="password" class="password" name="senha" placeholder="Password">
+            <button onclick="loginRequest();">Subscribe</button>
+        </form>
+        <a href="index.html">Don't have a account? Subscribe yourself</a>
     </div>
+
+    <script src="loginscript.js"></script>
 </body>
 </html>
