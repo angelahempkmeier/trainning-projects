@@ -47,11 +47,19 @@ public class UserController {
         return ResponseEntity.status(204).build();
     }
 
+//    @PostMapping("/login")
+//    public ResponseEntity<Token> login(@Valid @RequestBody UserDTO userDTO){
+//        Token token = userService.generateToken(userDTO);
+//        if(token != null){
+//            return ResponseEntity.ok(token);
+//        }
+//        return ResponseEntity.status(403).build();
+//    }
     @PostMapping("/login")
-    public ResponseEntity<Token> login(@Valid @RequestBody UserDTO userDTO){
+    public ResponseEntity<UserDTO> login(@Valid @RequestBody UserDTO userDTO){
         Token token = userService.generateToken(userDTO);
         if(token != null){
-            return ResponseEntity.ok(token);
+            return ResponseEntity.ok(userDTO);
         }
         return ResponseEntity.status(403).build();
     }
