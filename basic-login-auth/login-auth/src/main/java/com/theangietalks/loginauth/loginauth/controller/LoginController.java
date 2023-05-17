@@ -41,6 +41,27 @@ public class LoginController {
         return false;
     }
 
+//    @GetMapping("/token")
+//    public ResponseEntity<String> getToken(@RequestHeader("Authorization") String authorizationHeader){
+//        String token = authorizationHeader.substring(7);
+//        return ResponseEntity.ok(token);
+//    }
+
+    @PostMapping("/token")
+    public ResponseEntity<String> getToken(@RequestBody User authRequest) throws Exception {
+        String username = authRequest.getUsername();
+        String password = authRequest.getPassword();
+
+        boolean credentialsValid = verifyCredentials(username, password);
+
+        if (credentialsValid) {
+            String token = jwtTokenUtil.generateToken(username);
+            return ResponseEntity.ok(token);
+        } else {
+            throw new Exception("Invalid username or password");
+        }
+    }
+
 //    public String getToken(){
 //
 //    }

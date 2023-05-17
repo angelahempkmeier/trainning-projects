@@ -30,6 +30,115 @@ function login(){
         })
 };
 
+// function copyToken(){
+    
+//     fetch('http://localhost:8080/login/token',
+//     {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             username: iUsername.value,
+//             password: iPassword.value
+//         })
+//     })
+//     .then((res) => {
+//         if(res.ok){
+//             return res.json();
+//         }else {
+//             throw new Error('Erro na requisição');
+//         }
+//     })
+//     .then((data) => {
+//         const token = data.token;
+//         if(navigator.clipboard){
+//             navigator.clipboard.writeText(token)
+//             .then(function(){
+//             alert("Token copiado para área de transferência.");
+//             })
+//             .catch(function(error) {
+//             console.error("Erro ao copiar o token: ", error);
+//             })
+//         } else {
+//             console.error('Problema na API clipboard.');
+//         }
+        
+//     })
+//     .catch((error) => {
+//         console.log('Error: ' + error);
+//     }); 
+// };
+
+// function copyToken() {
+//     fetch('http://localhost:8080/login/token', {
+//         method: 'GET',
+//         headers: {
+//             "Accept": "application/json",
+//             "Authorization": "Bearer "
+//         }
+//     })
+//     .then((res) => {
+//         if (res.ok) {
+//             return res.text(); // Use res.text() em vez de res.json() para obter o token como uma string
+//         } else {
+//             throw new Error('Erro na requisição');
+//         }
+//     })
+//     .then((token) => {
+//         if (navigator.clipboard) {
+//             navigator.clipboard.writeText(token)
+//             .then(function() {
+//                 alert("Token copiado para área de transferência.");
+//             })
+//             .catch(function(error) {
+//                 console.error("Erro ao copiar o token: ", error);
+//             });
+//         } else {
+//             console.error('Problema na API clipboard.');
+//         }
+//     })
+//     .catch((error) => {
+//         console.log('Error: ' + error);
+//     });
+// };
+
+function copyToken() {
+    fetch('http://localhost:8080/login/token', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: iUsername.value,
+            password: iPassword.value
+        })
+    })
+    .then((res) => {
+        if (res.ok) {
+            return res.text(); // Alterado para res.text() para obter o token como texto
+        } else {
+            throw new Error('Erro na requisição');
+        }
+    })
+    .then((token) => {
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(token)
+            .then(function() {
+                alert("Token copiado para área de transferência.");
+            })
+            .catch(function(error) {
+                console.error("Erro ao copiar o token: ", error);
+            });
+        } else {
+            console.error('Problema na API clipboard.');
+        }
+    })
+    .catch((error) => {
+        console.log('Error: ' + error);
+    });
+};
+
 
 function clear(){
     iUsername.value = "";
