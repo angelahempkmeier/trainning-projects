@@ -35,6 +35,19 @@ public class User {
     @Column(name = "phone", length = 15, nullable = false)
     private String phone;
 
+    public User(){
+
+    }
+
+    public User(Integer id, String fullname, String username, String email, String password_user) {
+        this.id = id;
+        this.fullname = fullname;
+        this.username = username;
+        this.email = email;
+        this.password_user = password_user;
+        this.phone = phone;
+    }
+
     public Integer getId() {
         return id;
     }
