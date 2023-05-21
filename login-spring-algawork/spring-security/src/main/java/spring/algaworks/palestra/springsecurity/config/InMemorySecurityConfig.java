@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
@@ -14,10 +15,10 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class InMemorySecurityConfig {
 
     @Bean
-    public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails user = User.withDefaultPasswordEncoder()
+    public UserDetailsService userDetailsService() {
+        UserDetails user = User.builder()
                 .username("angela")
-                .password("123")
+                .password("{noop}123")
                 .roles("PG_PROJETOS")
                 .build();
         return new InMemoryUserDetailsManager(user);
