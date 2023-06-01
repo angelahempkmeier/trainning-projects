@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    background: linear-gradient(135deg, rgb(3, 3, 122), rgb(71, 71, 221));
+    background: linear-gradient(135deg, #f6871f, #241201);
 }
 
 h1 {
@@ -28,18 +28,18 @@ form input {
     border-radius: 10px;
 }
 p {
-    border: 0.5px solid #1C0D4B;
+    border: 0.5px solid #f6bd22;
     padding: 200px;
-    color: #1C0D4B;
+    color: #f6bd22;
     border-radius: 10px;
-    background: linear-gradient(135deg, #1C0D4B, #CCBDFA);
+    background: linear-gradient(135deg, #f6bd22, #f6ce92);
     transition: 500ms;
 }
 p:hover{
-    background: linear-gradient(135deg, rgb(31, 31, 80), rgb(110, 110, 170));
+    background: linear-gradient(135deg, #f6bd22, #f6ce92);
     color: white;
     padding: 205px;
-    border: 0.5px solid rgb(31, 31, 80);
+    border: 0.5px solid #f6bd22;
 }
 
 .login {
@@ -47,20 +47,20 @@ p:hover{
     height: 30px;
     border-radius: 30px;
     border: none;
-    background-color: #1C0D4B;
-    color: #CCBDFA;
+    background-color: #f6bd22;
+    color: #241201;
     transition: 250ms linear;
 }
 
 .login:hover {
-    background-color: #CCBDFA;
-    color: #1C0D4B;
+    background-color: #f6ce92;
+    color: #f6bd22;
    
 } 
 
 .copy-token{
-    background-color: #CCBDFA;
-    color: #1C0D4B;
+    background-color: #241201;
+    color: #f6bd22;
     width: 100%;
     border-radius: 30px;
     border: none;
@@ -68,7 +68,7 @@ p:hover{
 }
 
 .copy-token:hover{
-    background-color: #1C0D4B;
-    color: #CCBDFA;
+    background-color: #f6bd22;
+    color: #f6ce92;
     
 }
