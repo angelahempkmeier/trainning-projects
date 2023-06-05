@@ -32,4 +32,8 @@ public class UserService {
         return false;
     }
 
+    public String getUserEmail(String email){
+        return email;
+    }
+
 }
