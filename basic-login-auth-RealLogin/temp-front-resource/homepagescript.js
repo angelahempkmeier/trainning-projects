@@ -1,32 +1,36 @@
-const button = document.querySelector("button");
-const emailInput = document.getElementById("email-service");
 
-button.addEventListener('click', function(){
-    const email = emailInput.value;
-    sendEmail(email);
-});
+const email = document.querySelector('.email');
+form = document.querySelector("form");
 
-function sendEmail(email){
-    
-    fetch('http://localhost:8080/login/send-token-email', {
-        headers:{
+function sendEmail(){
+    fetch('http://localhost:8080/login/send-token-email',
+    {
+        headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
         },
         method: "POST",
-        body: JSON.stringify({
-            recipient: email
-        })
+        body: JSON.stringify(
+            {
+                email: email.value
+            }
+        )
     })
-    .then(function(res){
-        if(res.ok){
-            alert('Token enviado para o email: ' + email);
-        }else{
-            throw new Error('Erro na requisição.');
+    .then(function(response) {
+        if(response.ok){
+            return response.json();
+        } else{
+            throw new Error('Erro ao enviar dados');
         }
     })
-    .catch(function(error){
-        console.log(error);
-    });
+    .then(function(data) {
+        alert("Email enviado com sucesso.");
+    })
+    .catch(function(error) {
+        console.error(error);
+    })
+};
 
-}
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+});

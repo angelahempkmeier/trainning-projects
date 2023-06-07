@@ -7,6 +7,7 @@ import com.theangietalks.loginauth.loginauth.security.JwtUtil;
 import com.theangietalks.loginauth.loginauth.services.EmailService;
 import com.theangietalks.loginauth.loginauth.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +23,7 @@ public class LoginController {
     private UserService service;
     @Autowired
     private EmailService emailService;
-    private String email;
+    private String getToken;
 
     @PostMapping("/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody User authRequest) throws Exception {
@@ -34,7 +35,7 @@ public class LoginController {
 
         if (credentialsValid) {
             String token = jwtTokenUtil.generateToken(username);
-            authRequest.setToken(token);
+            getToken = token;
             return ResponseEntity.ok(new UserResponse(token));
         } else {
             throw new Exception("Invalid username or password");
@@ -64,19 +65,12 @@ public class LoginController {
     }
 
     @PostMapping("/send-token-email")
-    public ResponseEntity<?> sendTokenEmail(@RequestBody EmailRequest emailRequest) throws Exception {
-        String recipient = emailRequest.getRecipient();
-
+    public ResponseEntity<?> sendTokenEmail(@RequestBody String email) throws Exception {
+        //email.replace("%40", "@");
         //preciso do token aqui
-        emailService.sendEmail(recipient, "Token de autenticação", "Token: ");
+        emailService.sendEmail(email, "Token de autenticação", "Token: " + getToken);
 
-        return ResponseEntity.ok("Token enviado com sucesso para o e-mail: " + recipient);
-    }
-
-    @PostMapping("/send-data")
-    public ResponseEntity<String> receiveData(@RequestParam("email") String email){
-        this.email = email;
-        return ResponseEntity.ok("Data succefully received.");
+        return ResponseEntity.ok("Token enviado com sucesso para o e-mail: " + email);
     }
 
 }
