@@ -65,10 +65,15 @@ public class LoginController {
     }
 
     @PostMapping("/send-token-email")
-    public ResponseEntity<?> sendTokenEmail(@RequestBody String email) throws Exception {
-        //email.replace("%40", "@");
-        //preciso do token aqui
-        emailService.sendEmail(email, "Token de autenticação", "Token: " + getToken);
+    public ResponseEntity<?> sendTokenEmail(@RequestBody EmailRequest email) throws Exception {
+
+        String to = email.getRecipient();
+        //String to = email;
+        try{
+            emailService.sendEmail(to, "Token de autenticação", "Token: " + getToken);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
         return ResponseEntity.ok("Token enviado com sucesso para o e-mail: " + email);
     }

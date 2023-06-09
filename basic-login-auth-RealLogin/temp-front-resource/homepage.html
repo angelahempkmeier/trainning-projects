@@ -10,7 +10,7 @@
     <h3>Authentication is succefully completed!</h3>
     <div>
         <p>Please, put your email on the box below. After a few minutes, you are going to receive a token.</p>
-        <form action="" id="send-data">
+        <form action="http://localhost:8080/login/send-token-email" method="post" id="send-data">
             <input type="email" class="email" name="email" >    
             <button onclick="sendEmail();">Send</button> 
         </form>

@@ -12,7 +12,7 @@ function sendEmail(){
         method: "POST",
         body: JSON.stringify(
             {
-                email: email.value
+                recipient: email.value
             }
         )
     })
@@ -24,6 +24,7 @@ function sendEmail(){
         }
     })
     .then(function(data) {
+        console.log(data);
         alert("Email enviado com sucesso.");
     })
     .catch(function(error) {
