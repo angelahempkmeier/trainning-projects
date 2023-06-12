@@ -17,11 +17,6 @@ public class UserService {
         return repository.findAll();
     }
 
-    public User findById(Long id){
-        Optional<User> user = repository.findById(id);
-        return user.orElseThrow(() -> new RuntimeException("User not found: " + id));
-    }
-
     public Boolean findByUsernameAndPassword(String username, String password){
         User mainUser = new User();
         for(User user : findAll()){
