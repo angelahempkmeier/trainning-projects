@@ -1,4 +1,4 @@
-package com.theangietalks.loginauth.loginauth.entity;
+package com.theangietalks.loginauth.loginauth.entities;
 
 public class UserResponse {
 

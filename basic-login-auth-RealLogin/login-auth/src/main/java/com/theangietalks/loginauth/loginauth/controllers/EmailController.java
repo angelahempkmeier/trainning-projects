@@ -1,6 +1,6 @@
-package com.theangietalks.loginauth.loginauth.controller;
+package com.theangietalks.loginauth.loginauth.controllers;
 
-import com.theangietalks.loginauth.loginauth.entity.EmailRequest;
+import com.theangietalks.loginauth.loginauth.entities.EmailRequest;
 import com.theangietalks.loginauth.loginauth.services.EmailService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

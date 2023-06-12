@@ -20,10 +20,11 @@ function login(){
             if(res.ok){
                 return res.json();
             }else {
+                alert("Your username or password is incorrect. Please try again.");
                 throw new Error('Erro na requisição.');
             }
         }).then(function(data){
-            alert('Token: ' + data.token);
+            //alert('Token: ' + data.token);
             window.location.href = 'homepage.html';
         })
         .catch(function (error){
@@ -63,6 +64,9 @@ function copyToken() {
         }
     })
     .catch((error) => {
+        if(iUsername.value == "" || iPassword.value == ""){
+            alert("It's necessary to insert your username and password to generate a token.");
+        }
         console.log('Error: ' + error);
     });
 };
@@ -76,6 +80,6 @@ function clear(){
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    subscribe();
+    //subscribe();
     clear();
 });

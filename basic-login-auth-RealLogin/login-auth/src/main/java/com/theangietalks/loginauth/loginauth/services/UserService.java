@@ -1,7 +1,7 @@
 package com.theangietalks.loginauth.loginauth.services;
 
-import com.theangietalks.loginauth.loginauth.entity.User;
-import com.theangietalks.loginauth.loginauth.repository.UserRepository;
+import com.theangietalks.loginauth.loginauth.entities.User;
+import com.theangietalks.loginauth.loginauth.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

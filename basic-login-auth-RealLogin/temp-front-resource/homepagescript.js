@@ -18,6 +18,7 @@ function sendEmail(){
     })
     .then(function(response) {
         if(response.ok){
+            alert("Email sent successfully.");
             return response.json();
         } else{
             throw new Error('Erro ao enviar dados');
@@ -25,7 +26,6 @@ function sendEmail(){
     })
     .then(function(data) {
         console.log(data);
-        alert("Email enviado com sucesso.");
     })
     .catch(function(error) {
         console.error(error);

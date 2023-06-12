@@ -1,15 +1,13 @@
-package com.theangietalks.loginauth.loginauth.controller;
+package com.theangietalks.loginauth.loginauth.controllers;
 
-import com.theangietalks.loginauth.loginauth.entity.EmailRequest;
-import com.theangietalks.loginauth.loginauth.entity.User;
-import com.theangietalks.loginauth.loginauth.entity.UserResponse;
-import com.theangietalks.loginauth.loginauth.security.JwtUtil;
+import com.theangietalks.loginauth.loginauth.entities.EmailRequest;
+import com.theangietalks.loginauth.loginauth.entities.User;
+import com.theangietalks.loginauth.loginauth.entities.UserResponse;
+import com.theangietalks.loginauth.loginauth.securities.JwtUtil;
 import com.theangietalks.loginauth.loginauth.services.EmailService;
 import com.theangietalks.loginauth.loginauth.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

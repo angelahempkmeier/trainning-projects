@@ -1,4 +1,4 @@
-package com.theangietalks.loginauth.loginauth.util;
+package com.theangietalks.loginauth.loginauth.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
