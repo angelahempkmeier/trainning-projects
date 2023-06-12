@@ -34,28 +34,28 @@ public class JwtUtil {
                 .compact();
     }
 
-    public Boolean validateToken(String token) {
-        try {
-            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(SECRET_KEY)).build();
-            DecodedJWT decodedJWT = verifier.verify(token);
-            return true;
-        } catch (JWTVerificationException exception) {
-            // Token inválido ou expirado
-            return false;
-        }
-    }
-
-    private static String generateSecretKey(){
-        int keyLength = 32; // Comprimento da chave em bytes
-
-        byte[] keyBytes = new byte[keyLength];
-        SecureRandom secureRandom = new SecureRandom();
-        secureRandom.nextBytes(keyBytes);
-
-        String secretKey = Base64.getEncoder().encodeToString(keyBytes);
-
-        return secretKey;
-    }
+//    public Boolean validateToken(String token) {
+//        try {
+//            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(SECRET_KEY)).build();
+//            DecodedJWT decodedJWT = verifier.verify(token);
+//            return true;
+//        } catch (JWTVerificationException exception) {
+//            // Token inválido ou expirado
+//            return false;
+//        }
+//    }
+//
+//    private static String generateSecretKey(){
+//        int keyLength = 32; // Comprimento da chave em bytes
+//
+//        byte[] keyBytes = new byte[keyLength];
+//        SecureRandom secureRandom = new SecureRandom();
+//        secureRandom.nextBytes(keyBytes);
+//
+//        String secretKey = Base64.getEncoder().encodeToString(keyBytes);
+//
+//        return secretKey;
+//    }
 
 
 
