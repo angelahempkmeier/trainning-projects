@@ -38,3 +38,26 @@ function showTask(){
 }
 
 showTask();
+
+//dark theme
+
+const videoSource = document.querySelector("#bgvid source");
+let isNightMode = false;
+
+
+const changeThemeBtn = document.querySelector("#change-theme");
+changeThemeBtn.addEventListener("change", function() {
+    if (isNightMode) {
+        document.body.classList.remove("dark");
+        videoSource.src = "day.mp4";
+      } else {
+        document.body.classList.add("dark");
+        videoSource.src = "night.mp4";
+      }
+      
+      var video = document.querySelector('#bgvid');
+      video.load();
+      video.play();
+      
+      isNightMode = !isNightMode;
+});
