@@ -1,4 +1,5 @@
 package com.example.cardapio.entities;
 
-public class FoodRequestDTO {
+public record FoodRequestDTO(String title, String image, Integer price) {
+
 }
