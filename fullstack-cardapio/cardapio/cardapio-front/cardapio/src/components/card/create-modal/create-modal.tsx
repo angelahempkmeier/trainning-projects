@@ -1,3 +1,12 @@
+const input = ({label, value, updateValue}) => {
+    return (
+        <>
+            <label>{label}</label>
+            <input value={value} onChange={updateValue}></input>
+        </>
+    )
+}
+
 interface CreateModalProps {
 
 }
