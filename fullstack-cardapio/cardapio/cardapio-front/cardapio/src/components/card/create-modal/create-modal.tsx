@@ -10,7 +10,7 @@ interface InputProps {
 }
 
 interface ModalProps{
-    closeModall():void
+    closeModal():void
 }
 
 const Input = ({label, value, updateValue}: InputProps) => {
