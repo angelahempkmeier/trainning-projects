@@ -27,7 +27,7 @@ function App() {
           />
         )}
       </div>
-      {isModalOpen && <CreateModal closeModal={handleOpenModal}/>}
+      {isModalOpen && <CreateModal/>}
       <button onClick={handleOpenModal}></button>
     </div>
   )
