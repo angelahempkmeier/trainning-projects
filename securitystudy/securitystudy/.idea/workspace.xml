@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd73f9c2-9f54-4d95-b095-3638e196fd4a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../basic-to-do-list_local-strorage/checked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../basic-to-do-list_local-strorage/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../basic-to-do-list_local-strorage/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../basic-to-do-list_local-strorage/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../basic-to-do-list_local-strorage/todolist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../basic-to-do-list_local-strorage/unchecked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../card-challenge-without-display-flex/card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../card-challenge-without-display-flex/desafioCard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../form-inscricao-js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../form-inscricao-js/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../form-inscricao-js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../form-inscricao-js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../form-inscricao-js/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../form-inscricao-js/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/TheangietalksApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/repository/UserInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/sucurity/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/sucurity/SecurityFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/sucurity/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/java/br/com/angie/theangietalks/sucurity/TokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/back/theangietalks/src/test/java/br/com/angie/theangietalks/TheangietalksApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/front/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/front/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/front/loginscript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/front/logon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/front/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../full-web-project_springboot-js-mysql/front/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/java/spring/algaworks/palestra/springsecurity/config/InMemorySecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/java/spring/algaworks/palestra/springsecurity/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/java/spring/algaworks/palestra/springsecurity/controller/GpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/java/spring/algaworks/palestra/springsecurity/gp/SpringSecurityApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/main/resources/templates/projetos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../login-spring-algawork/spring-security/src/test/java/spring/algaworks/palestra/springsecurity/SpringSecurityApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../menu-bar-with-flexbox/flexboxMenu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../menu-bar-without-display-flex/css/menustyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../menu-bar-without-display-flex/desafioMenu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../menu-bar-without-display-flex/desafioMenuPeloProf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/SecuritystudyApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/config/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/config/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/config/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/config/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/entities/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/angie/securitystudy/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/angie/securitystudy/SecuritystudyApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Rnn78zD8NI1qj7tHduw3ptOpSD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Angela/Desktop/angela-personal/github/trainning-projects/securitystudy/securitystudy/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5e3d591c3f02691484943c3773f0bac1&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.angie.securitystudy.controller" />
+      <recent name="com.angie.securitystudy.config" />
+      <recent name="com.angie.securitystudy.entities" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SecuritystudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="securitystudy" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.angie.securitystudy.SecuritystudyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd73f9c2-9f54-4d95-b095-3638e196fd4a" name="Changes" comment="" />
+      <created>1687894543705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687894543705</updated>
+      <workItem from="1687894544723" duration="1758000" />
+      <workItem from="1687992308775" duration="2886000" />
+      <workItem from="1688069493665" duration="6444000" />
+      <workItem from="1688233425509" duration="989000" />
+      <workItem from="1688341985500" duration="1259000" />
+      <workItem from="1688410030069" duration="9060000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
