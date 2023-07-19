@@ -2,51 +2,36 @@
     padding: 0;
     margin: 0;
     font-family: 'Nunito', sans-serif;
-}
-
-video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1000; /*deixa no bg*/
 
 }
 
-.login-container {
+.main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-}
-
-.center {
-    width: 40%;
-    height: 40%;
-    background-color: #D3B38F;
-    border-radius: 15px;
-    max-width: 400px;
+    align-items: flex-start;
+    margin: 50px;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
-    color: #141211;
     text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    left: 250px;
+    top: 180px;
 }
 
-
 form {
+    width: 50%;
+    height: 50%;
+    background-color: #D3B38F;
+    border-radius: 15px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    height: 80%;
 }
 
 form input {
@@ -71,15 +56,3 @@ button:hover{
     opacity: 0.5;
     color: #D3B38F;
 }
-
-a{
-    text-decoration: none;
-    color: #141211;
-    margin: 5px;
-}
-
-a:hover{
-    opacity: 0.8;
-}
-
-
