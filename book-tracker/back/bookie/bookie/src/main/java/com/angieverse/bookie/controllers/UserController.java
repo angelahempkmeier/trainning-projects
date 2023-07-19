@@ -23,8 +23,16 @@ public class UserController {
         }else{
             throw new Exception("Invalid user.");
         }
+    }
 
+    @PostMapping("/login")
+    public ResponseEntity<?> register(@RequestBody User user) throws Exception{
 
+        if(service.verifyCredentials(user)){
+            return ResponseEntity.ok(new UserResponse(user));
+        }else{
+            throw new Exception("Invalid user.");
+        }
     }
 
 }

@@ -53,6 +53,10 @@ public class UserService {
         throw new NoSuchElementException("Email " + email+ "wasn't found on database.");
     }
 
+    public void saveUser(User user){
+        repository.save(user);
+    }
+
     public boolean verifyCredentials(User user){
         String email = user.getEmail();
         String username = user.getUsername();
