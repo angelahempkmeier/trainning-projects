@@ -6,6 +6,9 @@ import com.angieverse.bookie.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.net.URI;
 
 @RestController
 @RequestMapping(value = "/users")
@@ -25,14 +28,12 @@ public class UserController {
         }
     }
 
-    @PostMapping("/login")
+    @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody User user) throws Exception{
+        user = service.insert(user);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(user.getId()).toUri();
 
-        if(service.verifyCredentials(user)){
-            return ResponseEntity.ok(new UserResponse(user));
-        }else{
-            throw new Exception("Invalid user.");
-        }
+        return ResponseEntity.created(uri).body(user);
     }
 
 }

@@ -6,7 +6,7 @@ const iUsername = document.querySelector("#username");
 const iPassword = document.querySelector("#password");
 
 function login(){
-    fetch('http://localhost:8080/users/login', 
+    fetch('http://localhost:8080/users/register', 
         {
             headers: {
                 "Accept": "application/json",
@@ -23,13 +23,13 @@ function login(){
         .then(function (res) {
             if(res.ok){
                 return res.json();
-                alert("You are now a part of Bokie's community!");
             }else {
                 alert("Something is wrong. Please try again.");
                 throw new Error('Erro na requisição.');
             }
         })
         .then(function(data){
+            alert("You are now a part of Bokie's community!");
             window.location.href = 'index.html';
         })
         .catch(function (error){

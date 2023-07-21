@@ -53,8 +53,8 @@ public class UserService {
         throw new NoSuchElementException("Email " + email+ "wasn't found on database.");
     }
 
-    public void saveUser(User user){
-        repository.save(user);
+    public User insert(User user){
+        return repository.save(user);
     }
 
     public boolean verifyCredentials(User user){
