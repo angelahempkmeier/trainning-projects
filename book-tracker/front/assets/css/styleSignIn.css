@@ -4,26 +4,28 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.principal{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+body {
+    background-image: url("../../bookie.jpg");
+    width: 100%;
+    max-width: 992px;
+    margin: auto;
+    min-width: 320px;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100%;
     width: 75%;
+    position: absolute;
+    left: -100px;
 }
 
 h1 {
     text-align: center;
-    text-shadow: 0  4px #fff;
+    text-shadow: 0 0px 3px #fff;
     color: #D3B38F;
 }
 
