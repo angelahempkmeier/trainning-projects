@@ -10,7 +10,7 @@ body {
 }
 
 .header-container {
-    background-color: #F6A453;
+    background-color: #f1c9a1;
     display: flex;
     justify-content: space-between;
     align-items: center;   
@@ -31,6 +31,7 @@ body {
 
 .logo img {
     width: 50px;
+    cursor: pointer;
 }
 
 .logo a {
@@ -64,8 +65,7 @@ header nav ul li {
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 600px;
-
+    
 }
 
 .home-content {
@@ -74,6 +74,31 @@ header nav ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+
+.home h1, .home h3 {
+    color: #F8F4EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    top: 300px;
+    
+}
+
+.home h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.home h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
 }
 
@@ -93,6 +118,16 @@ header nav ul li {
 
 .slides input {
     display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    opacity: 0.5;
 }
 
 .manual-navigation {
@@ -119,4 +154,112 @@ header nav ul li {
     background-color: #F8F4EB;
 }
 
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
 
+#radio2:checked{
+    margin-left: -200%;
+}
+
+.my-references {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+
+.my-references h3, .add-reference h3, .about-us h3, .contact-bookie h3 {
+    font-size: 24px;
+    border-bottom: 0.5px solid #f1c9a1;
+    margin: 10px;
+}
+
+
+.my-references select {
+    border: none;
+    background-color: #f1c9a1;
+    border-radius: 10px;
+    padding: 10px;
+    color: #F8F4EB;
+    font-weight: bold;
+}
+
+.add-reference {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+
+.reference-item, .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+.reference-item input, .contact-form input {
+    width: 100%;
+    border: none;
+    background-color: #F8F4EB;
+    margin: 10px;
+}
+
+.reference-item textarea, .contact-form textarea {
+    width: 100%;
+    border: none;
+    background-color: #F8F4EB;
+    color: gray;
+}
+
+.reference-item button, .contact-form button {
+    border: none;
+    background-color: #f1c9a1;
+    border-radius: 10px;
+    padding: 10px;
+    color: #F8F4EB;
+    font-weight: bold;
+}
+
+.reference-item button:hover, .contact-form button:hover {
+    opacity: 0.5;
+    color: #FFFCF2;
+}
+
+.about-us {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-bookie {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    width: 120px;
+}
+
+footer {
+    background-color: #f1c9a1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    width: 100vw;
+    height: 80px;
+    color: #F8F4EB;
+}
