@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookie | Home</title>
     <link rel="stylesheet" href="assets/css/homepage.css">
 </head>
+
 <body>
     <header class="header-container">
         <div class="logo">
-            <a href="homepage.html"><p>Bookie</p></a>
+            <img src="assets/images/bookie-logo.png" alt="">
+            <a href="homepage.html">
+                <p>Bookie</p>
+            </a>
         </div>
 
         <nav class="menu">
@@ -25,28 +30,53 @@
 
     <div class="home">
         <h1>Hi, there!</h1>
-        <h3>Add your favorites references and link key word to them. This way, it's going to be very easy to find any of them.</h3>
+        <h3>Add your favorites references and link key word to them. This way, it's going to be very easy to find any of
+            them.</h3>
+    </div>
+
+    <div class="my-references">
+        <h3>Visualize all the references that you add and filter them by book or keyword.</h3>
+        <select id="filter" placeholder="Choose your filter">
+            <option value="" disabled selected hidden>Filter by?</option>
+            <option value=""></option>
+            <option value="filterbybook">Book</option>
+            <option value="filterbykeyword">Keyword</option>
+        </select>
     </div>
 
     <div class="add-reference">
         <form action="" class="reference-item">
-            <p>References</p>
+            <h3>Add a new reference</h3>
             <input type="text" name="book" id="book" placeholder="Book's name">
             <textarea name="quote" id="quote" cols="30" rows="10">Quote your reference</textarea>
-            <input type="text" name="keyword" id="keyword" placeholder="Add some keyword to it.">
+            <input type="text" id="itemInput" placeholder="Add a keyword to your reference">
+            <ul id="itemList"></ul>
         </form>
     </div>
-    
-    <div class="about-us">
 
+    <div class="about-us">
+        <p>Bookie is a program that intentes to facilitate your job finding a good reference that one day you caught and, now, want to uses in a text, in a conversation or anywhere that makes sense to you.</p>
     </div>
 
 
     <div class="contact-bookie">
-        
+        <h3>Contact Bookie</h3>
+        <p>Do you have a double? Please, contact us for the form below. Or if you wanna give us sugestions, feel free to do it! </p>
+        <form action="">
+            <input type="text" name="contact-name" id="contact-name" placeholder="Your name">
+            <input type="email" name="contact-email" id="contact-email" placeholder="Your email">
+            <textarea name="contact-message" id="contact-message" cols="30" rows="10">Your message</textarea>
+            <button>Send</button>
+        </form>
     </div>
 
-    
+    <footer>
+        
+    </footer>
+
+
+    <script src="assets/js/homepage.js"></script>
 
 </body>
+
 </html>
