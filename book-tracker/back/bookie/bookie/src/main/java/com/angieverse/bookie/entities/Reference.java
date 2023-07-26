@@ -29,4 +29,8 @@ public class Reference {
     @Column(name = "keyword")
     private List<String> keyword;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
 }
