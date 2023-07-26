@@ -1,11 +1,11 @@
-const itemInput = document.getElementById("itemInput");
+const keyword = document.getElementById("keyword");
 const itemList = document.getElementById("itemList");
 const images = ["slides1.jpg", "slides2.jpg", "slides3.jpg", "slides4.jpg"];
 let currentSlide = 0;
 const intervalTime = 5000; 
 
 
-itemInput.addEventListener("keyup", function(event) {
+keyword.addEventListener("keyup", function(event) {
   // Verifica se a tecla pressionada é a tecla "Enter" (código 13)
   if (event.keyCode === 13) {
     addItemToList();
@@ -13,7 +13,7 @@ itemInput.addEventListener("keyup", function(event) {
 });
 
 function addItemToList() {
-  const newItemText = itemInput.value.trim();
+  const newItemText = keyword.value.trim();
 
   if (newItemText === "") {
     return; // Evita adicionar itens vazios à lista
@@ -24,7 +24,7 @@ function addItemToList() {
 
   itemList.appendChild(listItem);
 
-  itemInput.value = ""; // Limpa o campo de entrada após adicionar o item
+  keyword.value = ""; // Limpa o campo de entrada após adicionar o item
 }
 
 function changeBackground(imageName) {
